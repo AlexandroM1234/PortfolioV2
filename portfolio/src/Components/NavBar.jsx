@@ -15,7 +15,7 @@ function NavBar() {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <>
-      <Flex justifyContent="space-between" w="100%">
+      <Flex justifyContent="space-evenly" w="100%" mt={2}>
         <Heading>Alex Martinez</Heading>
         <Stack direction="row">
           <Button variant="ghost">About</Button>
