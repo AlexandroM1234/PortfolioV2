@@ -21,6 +21,7 @@ function NavBar() {
         w="100%"
         padding={2}
         backgroundColor={"blackAlpha.300"}
+        position={"fixed"}
       >
         <Stack direction="row">
           <Heading>A M</Heading>
