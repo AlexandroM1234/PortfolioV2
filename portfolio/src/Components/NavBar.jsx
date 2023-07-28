@@ -10,18 +10,23 @@ import {
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { SiGithub, SiLinkedin } from "react-icons/si";
+import { AiOutlineMail } from "react-icons/ai";
 
 function NavBar() {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <>
-      <Flex justifyContent="space-evenly" w="100%" mt={2}>
-        <Heading>Alex Martinez</Heading>
+      <Flex
+        justifyContent="space-between"
+        w="100%"
+        padding={2}
+        backgroundColor={"blackAlpha.300"}
+      >
         <Stack direction="row">
+          <Heading>A M</Heading>
           <Button variant="ghost">About</Button>
           <Button variant="ghost">Experience</Button>
           <Button variant="ghost">Projects</Button>
-          <Button variant="ghost">Contact</Button>
         </Stack>
         <Stack direction="row">
           <Link
@@ -38,6 +43,10 @@ function NavBar() {
           >
             <Icon boxSize={6} as={SiGithub} />
           </Link>
+          <Button variant="ghost">
+            <Icon boxSize={6} as={AiOutlineMail} mr={"1"} />
+            Email Me
+          </Button>
           <Button
             variant="ghost"
             onClick={toggleColorMode}
