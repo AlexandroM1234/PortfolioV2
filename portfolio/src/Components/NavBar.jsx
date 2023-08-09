@@ -1,16 +1,6 @@
 import React from "react";
-import {
-  Button,
-  Flex,
-  Heading,
-  Stack,
-  useColorMode,
-  Icon,
-  Link,
-} from "@chakra-ui/react";
+import { Button, Flex, Heading, Stack, useColorMode } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
-import { SiGithub, SiLinkedin } from "react-icons/si";
-import { AiOutlineMail } from "react-icons/ai";
 
 function NavBar() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -30,24 +20,6 @@ function NavBar() {
           <Button variant="ghost">Projects</Button>
         </Stack>
         <Stack direction="row">
-          <Link
-            className="chakra-button css-1nlwyv4"
-            href="https://www.linkedin.com/in/alex-martinez123/"
-            aria-label="Link to Alex Martinez's LinkedIn"
-          >
-            <Icon boxSize={6} as={SiLinkedin} />
-          </Link>
-          <Link
-            className="chakra-button css-1nlwyv4"
-            href="https://github.com/AlexandroM1234"
-            aria-label="Link to Alex-Martinez's LinkedIn"
-          >
-            <Icon boxSize={6} as={SiGithub} />
-          </Link>
-          <Button variant="ghost">
-            <Icon boxSize={6} as={AiOutlineMail} mr={"1"} />
-            Email Me
-          </Button>
           <Button
             variant="ghost"
             onClick={toggleColorMode}
