@@ -6,7 +6,15 @@ import { AiOutlineMail } from "react-icons/ai";
 function Footer() {
   return (
     <>
-      <Flex justifyContent={"space-between"} padding={"2"}>
+      <Flex
+        position={"absolute"}
+        bottom={"0"}
+        left={"0"}
+        right={"0"}
+        justifyContent={"space-between"}
+        padding={"2"}
+        marginY={"2"}
+      >
         <div className="trademark">
           <Text>@2023 Alexandro Martinez</Text>
         </div>
