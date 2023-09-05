@@ -1,5 +1,10 @@
 import { Flex, SimpleGrid, Text } from "@chakra-ui/react";
-import { TechStack } from "../constants/constants";
+import {
+  ABOUT_ME,
+  ABOUT_ME_HEADER,
+  SKILLS,
+  Skills,
+} from "../constants/constants";
 import React from "react";
 import TechCard from "./TechCard";
 
@@ -12,17 +17,12 @@ function About() {
         flexDirection={"column"}
         alignItems={"center"}
       >
-        <Text fontSize={"4xl"}>About Me</Text>
-
+        <Text fontSize={"4xl"}>{ABOUT_ME_HEADER}</Text>
         <Flex textAlign={"center"} flexDirection={"column"}>
-          <Text>
-            I am a Full-Stack Engineer with a focus on the frontend based out of
-            Virginia. Outside of sitting in my room and coding I like to
-            workout, play video games and listen to music.
-          </Text>
-          <Text>Tech Stack</Text>
+          <Text>{ABOUT_ME}</Text>
+          <Text>{SKILLS}</Text>
           <SimpleGrid columns={2} spacing={3}>
-            {TechStack.map((item) => (
+            {Skills.map((item) => (
               <TechCard name={item.name} icon={item.icon} />
             ))}
           </SimpleGrid>

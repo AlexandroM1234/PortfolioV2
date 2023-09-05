@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Flex, Heading, Stack, useColorMode } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
+import { ABOUT, EXPERIENCE, PROJECTS } from "../constants/constants";
 
 function NavBar() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -15,9 +16,9 @@ function NavBar() {
       >
         <Stack direction="row">
           <Heading>A M</Heading>
-          <Button variant="ghost">About</Button>
-          <Button variant="ghost">Experience</Button>
-          <Button variant="ghost">Projects</Button>
+          <Button variant="ghost">{ABOUT}</Button>
+          <Button variant="ghost">{EXPERIENCE}</Button>
+          <Button variant="ghost">{PROJECTS}</Button>
         </Stack>
         <Stack direction="row">
           <Button

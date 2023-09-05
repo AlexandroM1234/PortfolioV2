@@ -1,5 +1,6 @@
 import React from "react";
 import { Flex, Text } from "@chakra-ui/react";
+import { TITLE, WELCOME } from "../constants/constants";
 
 function Landing() {
   return (
@@ -11,8 +12,8 @@ function Landing() {
         height={"2xl"}
       >
         <Flex direction={"column"} alignItems={"center"}>
-          <Text fontSize={"6xl"}>Hi, I'm Alex</Text>
-          <Text fontSize={"4xl"}>I'm a Full-Stack Software Engineer</Text>
+          <Text fontSize={"6xl"}>{WELCOME}</Text>
+          <Text fontSize={"4xl"}>{TITLE}</Text>
         </Flex>
       </Flex>
     </>

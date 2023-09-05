@@ -2,6 +2,7 @@ import { Stack, Text, Link, Icon, Flex } from "@chakra-ui/react";
 import React from "react";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 import { AiOutlineMail } from "react-icons/ai";
+import { COPYRIGHT } from "../constants/constants";
 
 function Footer() {
   return (
@@ -16,7 +17,7 @@ function Footer() {
         marginY={"2"}
       >
         <div className="trademark">
-          <Text>@2023 Alexandro Martinez</Text>
+          <Text>{COPYRIGHT}</Text>
         </div>
 
         <div className="icons">
