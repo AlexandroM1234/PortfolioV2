@@ -16,11 +16,11 @@ function NavBar() {
       >
         <Stack direction="row">
           <Heading>A M</Heading>
+        </Stack>
+        <Stack direction="row">
           <Button variant="ghost">{ABOUT}</Button>
           <Button variant="ghost">{EXPERIENCE}</Button>
           <Button variant="ghost">{PROJECTS}</Button>
-        </Stack>
-        <Stack direction="row">
           <Button
             variant="ghost"
             onClick={toggleColorMode}
