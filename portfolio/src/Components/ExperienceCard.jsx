@@ -13,7 +13,7 @@ import {
 const ExperienceCard = ({ job }) => {
   const { employer, role, date, location, desc, logo, stack } = job;
   return (
-    <Card direction={"row"} overflow="hidden" variant="outline">
+    <Card direction={"row"} zIndex={-1} variant={"outline"}>
       <Image
         maxW={{ base: "100%", sm: "200px" }}
         src={logo}

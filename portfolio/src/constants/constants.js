@@ -50,18 +50,18 @@ export const Skills = [
 export const ProjectDetails = [
   {
     name: "Econ",
-    desc: "A web application for users to see their ",
+    desc: "A web application for users to see their energy consumtion and cost on house hold items ",
     date: "May 2020 - June 2020",
-    img: "",
-    url: "",
+    img: "/encon.png",
+    url: "https://github.com/BloomTech-Labs/Encon-fe",
     stack: ["JavaScript", "React, SCSS", "Context", "React Hook Form"],
   },
   {
     name: "This Portfolio",
     date: "September 2023 - Current",
-    img: "",
-    desc: "Curious to see how I built this click here",
-    url: "",
+    img: "/portfolio.png",
+    desc: "Curious to see how I built this? Check it out on GitHub.",
+    url: "https://github.com/AlexandroM1234/PortfolioV2",
     stack: ["JavaScript", "React", "Chakra UI", "Framer Motion"],
   },
 ];
