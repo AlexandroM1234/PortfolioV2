@@ -50,7 +50,7 @@ export const Skills = [
 export const ProjectDetails = [
   {
     name: "Econ",
-    desc: "A web application for users to see their ",
+    desc: "A web application for users to see their energy consumtion and cost on house hold items ",
     date: "May 2020 - June 2020",
     img: "",
     url: "",
