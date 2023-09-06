@@ -72,8 +72,8 @@ export const JobExperience = [
     role: "Software Engineer",
     date: "October 2022 - July 2023",
     location: "Remote",
-    desc: "Worked on a cross-functional team to develop a web application for over 40,000 managers in the company to use",
-    logo: "",
+    desc: "Worked on a cross-functional team to develop a web application for over 40,000 managers in the company to use.",
+    logo: "/Chase.png",
     stack: ["JavaScript", "SCSS", "React", "Redux", "Ag-Grid"],
   },
   {
@@ -82,7 +82,7 @@ export const JobExperience = [
     date: "March 2022 - April 2022",
     location: "Remote",
     desc: "Created a feature for file uploading for parents, teachers, and students to use in their tutoring sessions.",
-    logo: "",
+    logo: "/GoSchoolBox.png",
     stack: ["JavaScript", "TypeScript", "SCSS", "Redux", "GraphQL", "MongoDB"],
   },
 ];
