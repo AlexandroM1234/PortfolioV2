@@ -8,7 +8,9 @@ import {
   Text,
   TagLabel,
   Tag,
+  Link,
 } from "@chakra-ui/react";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 const ProjectCard = ({ project }) => {
   const { name, desc, date, img, url, stack } = project;
@@ -23,7 +25,11 @@ const ProjectCard = ({ project }) => {
 
         <Stack>
           <CardBody width={"3xl"}>
-            <Heading size="md">{name}</Heading>
+            <Heading size="md">
+              <Link href={url} isExternal>
+                {name} <ExternalLinkIcon mx={"2px"} />
+              </Link>
+            </Heading>
             <Heading size="sm">{date}</Heading>
             <Text py="2">{desc}</Text>
             {stack.map((tech) => (
