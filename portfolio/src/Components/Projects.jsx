@@ -1,12 +1,12 @@
 import { Box, Flex, Text, VStack } from "@chakra-ui/react";
 import { ProjectDetails } from "../constants/constants.js";
-import React from "react";
+import React, { forwardRef } from "react";
 import ProjectCard from "./ProjectCard.jsx";
 
-function Projects() {
+const Projects = (_, ref) => {
   return (
     <>
-      <Box height={"2xl"}>
+      <Box ref={ref} height={"2xl"}>
         <Flex justifyContent={"center"} direction={"column"} align={"center"}>
           <Text fontSize={"4xl"}>Projects</Text>
           <VStack spacing={4} align={"center"}>
@@ -18,6 +18,6 @@ function Projects() {
       </Box>
     </>
   );
-}
+};
 
-export default Projects;
+export default forwardRef(Projects);

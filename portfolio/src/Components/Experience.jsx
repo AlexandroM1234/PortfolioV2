@@ -1,19 +1,23 @@
-import { Flex, Text, VStack } from "@chakra-ui/react";
-import React from "react";
+import { Box, Flex, Text, VStack } from "@chakra-ui/react";
+import React, { forwardRef } from "react";
 import { JobExperience } from "../constants/constants.js";
 import ExperienceCard from "./ExperienceCard.jsx";
 
-const Experience = () => {
+const Experience = (_, ref) => {
   return (
-    <Flex height={"2xl"} align={"center"} direction={"column"}>
-      <Text fontSize={"4xl"}>Experience</Text>
-      <VStack align={"center"} spacing={4}>
-        {JobExperience.map((job) => (
-          <ExperienceCard job={job} />
-        ))}
-      </VStack>
-    </Flex>
+    <>
+      <Box ref={ref} height={"2xl"}>
+        <Flex align={"center"} direction={"column"}>
+          <Text fontSize={"4xl"}>Experience</Text>
+          <VStack align={"center"} spacing={4}>
+            {JobExperience.map((job) => (
+              <ExperienceCard job={job} />
+            ))}
+          </VStack>
+        </Flex>
+      </Box>
+    </>
   );
 };
 
-export default Experience;
+export default forwardRef(Experience);

@@ -4,7 +4,7 @@ import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { ABOUT, EXPERIENCE, PROJECTS } from "../constants/constants";
 import AnimatedButton from "./animated/AnimatedButton";
 
-const NavBar = () => {
+const NavBar = ({ handleScroll, aboutRef, experienceRef, projectsRef }) => {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <>
@@ -20,13 +20,19 @@ const NavBar = () => {
         </Stack>
         <Stack direction="row">
           <AnimatedButton>
-            <Button variant="ghost">{ABOUT}</Button>
+            <Button onClick={() => handleScroll(aboutRef)} variant="ghost">
+              {ABOUT}
+            </Button>
           </AnimatedButton>
           <AnimatedButton>
-            <Button variant="ghost">{EXPERIENCE}</Button>
+            <Button onClick={() => handleScroll(experienceRef)} variant="ghost">
+              {EXPERIENCE}
+            </Button>
           </AnimatedButton>
           <AnimatedButton>
-            <Button variant="ghost">{PROJECTS}</Button>
+            <Button onClick={() => handleScroll(projectsRef)} variant="ghost">
+              {PROJECTS}
+            </Button>
           </AnimatedButton>
           <AnimatedButton>
             <Button
