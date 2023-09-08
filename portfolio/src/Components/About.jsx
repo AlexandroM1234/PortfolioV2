@@ -1,4 +1,4 @@
-import { Flex, SimpleGrid, Text, Box } from "@chakra-ui/react";
+import { Flex, SimpleGrid, Text, Box, Heading } from "@chakra-ui/react";
 import {
   ABOUT_ME,
   ABOUT_ME_HEADER,
@@ -7,27 +7,36 @@ import {
 } from "../constants/constants";
 import React, { forwardRef } from "react";
 import TechCard from "./TechCard";
+import { motion, useInView } from "framer-motion";
 
 const About = (_, ref) => {
+  const isInView = useInView(ref);
+
   return (
     <>
-      <Box ref={ref} height={"2xl"}>
-        <Flex
-          justifyContent={"center"}
-          flexDirection={"column"}
-          alignItems={"center"}
-        >
-          <Text fontSize={"4xl"}>{ABOUT_ME_HEADER}</Text>
-          <Flex textAlign={"center"} flexDirection={"column"}>
-            <Text>{ABOUT_ME}</Text>
-            <Text>{SKILLS}</Text>
-            <SimpleGrid columns={2} spacing={3}>
-              {Skills.map((item) => (
-                <TechCard name={item.name} icon={item.icon} />
-              ))}
-            </SimpleGrid>
-          </Flex>
-        </Flex>
+      <Box ref={ref} minHeight={"100vh"} marginY={1}>
+        {isInView ? (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.75 }}
+          >
+            <Flex justifyContent={"space-evenly"} width={"100%"}>
+              <Flex direction={"column"} width={"lg"} textAlign={"left"}>
+                <Heading>{ABOUT_ME_HEADER}</Heading>
+                <Text>{ABOUT_ME}</Text>
+              </Flex>
+              <Flex direction={"column"} textAlign={"left"}>
+                <Heading>{SKILLS}</Heading>
+                <SimpleGrid columns={2} spacing={3}>
+                  {Skills.map((item) => (
+                    <TechCard name={item.name} icon={item.icon} />
+                  ))}
+                </SimpleGrid>
+              </Flex>
+            </Flex>
+          </motion.div>
+        ) : null}
       </Box>
     </>
   );
