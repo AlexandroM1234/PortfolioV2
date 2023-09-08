@@ -1,8 +1,15 @@
 import React from "react";
-import { Button, Flex, Heading, Stack, useColorMode } from "@chakra-ui/react";
+import {
+  Avatar,
+  Button,
+  Flex,
+  Stack,
+  useColorMode,
+  Heading,
+} from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { ABOUT, EXPERIENCE, PROJECTS } from "../constants/constants";
-import AnimatedButton from "./animated/AnimatedButton";
+import { motion } from "framer-motion";
 
 const NavBar = ({ handleScroll, aboutRef, experienceRef, projectsRef }) => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -15,36 +22,46 @@ const NavBar = ({ handleScroll, aboutRef, experienceRef, projectsRef }) => {
         backgroundColor={"blackAlpha.300"}
         position={"fixed"}
       >
-        <Stack direction="row">
-          <Heading>A M</Heading>
+        <Stack marginLeft={2} align={"center"} direction="row">
+          <Avatar name="Alex Martinez" src="/me.png" />
+          <Heading size="md">Alex Martinez</Heading>
         </Stack>
         <Stack direction="row">
-          <AnimatedButton>
-            <Button onClick={() => handleScroll(aboutRef)} variant="ghost">
-              {ABOUT}
-            </Button>
-          </AnimatedButton>
-          <AnimatedButton>
-            <Button onClick={() => handleScroll(experienceRef)} variant="ghost">
-              {EXPERIENCE}
-            </Button>
-          </AnimatedButton>
-          <AnimatedButton>
-            <Button onClick={() => handleScroll(projectsRef)} variant="ghost">
-              {PROJECTS}
-            </Button>
-          </AnimatedButton>
-          <AnimatedButton>
-            <Button
-              variant="ghost"
-              onClick={toggleColorMode}
-              aria-label={`Toggle color mode to: ${
-                colorMode === "light" ? "dark" : "light"
-              }`}
-            >
-              {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-            </Button>
-          </AnimatedButton>
+          <Button
+            as={motion.button}
+            whileHover={{ scale: 1.1 }}
+            onClick={() => handleScroll(aboutRef)}
+            variant="ghost"
+          >
+            {ABOUT}
+          </Button>
+          <Button
+            as={motion.button}
+            whileHover={{ scale: 1.1 }}
+            onClick={() => handleScroll(experienceRef)}
+            variant="ghost"
+          >
+            {EXPERIENCE}
+          </Button>
+          <Button
+            as={motion.button}
+            whileHover={{ scale: 1.1 }}
+            onClick={() => handleScroll(projectsRef)}
+            variant="ghost"
+          >
+            {PROJECTS}
+          </Button>
+          <Button
+            as={motion.button}
+            whileHover={{ scale: 1.1 }}
+            variant="ghost"
+            onClick={toggleColorMode}
+            aria-label={`Toggle color mode to: ${
+              colorMode === "light" ? "dark" : "light"
+            }`}
+          >
+            {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+          </Button>
         </Stack>
       </Flex>
     </>

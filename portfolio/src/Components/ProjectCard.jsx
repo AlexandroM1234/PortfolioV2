@@ -16,7 +16,7 @@ const ProjectCard = ({ project }) => {
   const { name, desc, date, img, url, stack } = project;
   return (
     <>
-      <Card direction={"row"} variant="outline" zIndex={0}>
+      <Card direction={"row"} variant="outline" zIndex={-1}>
         <Image
           maxW={{ base: "100%", sm: "200px" }}
           src={img}
