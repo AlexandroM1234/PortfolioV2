@@ -8,7 +8,7 @@ const Landing = () => {
       justify={"center"}
       direction={"column"}
       align={"center"}
-      height={"3xl"}
+      height={"100vh"}
     >
       <Flex direction={"column"} alignItems={"center"}>
         <Text fontSize={"6xl"}>{WELCOME}</Text>
