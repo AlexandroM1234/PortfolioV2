@@ -8,12 +8,12 @@ const TechCard = ({ name, icon }) => {
         justifyContent={"flex-start"}
         border={"1px"}
         borderColor={"gray"}
-        padding={4}
+        padding={3}
         borderRadius={10}
         alignItems={"center"}
       >
         <Icon as={icon} boxSize={10} />
-        <Text size={"m"} marginLeft={3}>
+        <Text size={"sm"} marginLeft={3}>
           {name}
         </Text>
       </Flex>
