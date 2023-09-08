@@ -23,7 +23,7 @@ const NavBar = ({ handleScroll, aboutRef, experienceRef, projectsRef }) => {
         position={"fixed"}
       >
         <Stack marginLeft={2} align={"center"} direction="row">
-          <Avatar name="Alex Martinez" src="/me.png" />
+          <Avatar showBorder name="Alex Martinez" src="/me.png" />
           <Heading size="md">Alex Martinez</Heading>
         </Stack>
         <Stack direction="row">
