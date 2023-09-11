@@ -1,23 +1,32 @@
-import { Box, Flex, Text, VStack } from "@chakra-ui/react";
-import { ProjectDetails } from "../constants/constants.js";
-import React from "react";
+import { Box, Flex, Heading, VStack } from "@chakra-ui/react";
+import { PROJECTS, ProjectDetails } from "../constants/constants.js";
+import React, { forwardRef } from "react";
 import ProjectCard from "./ProjectCard.jsx";
+import { motion, useInView } from "framer-motion";
 
-function Projects() {
+const Projects = (_, ref) => {
+  const isInView = useInView(ref);
   return (
     <>
-      <Box height={"2xl"}>
-        <Flex justifyContent={"center"} direction={"column"} align={"center"}>
-          <Text fontSize={"4xl"}>Projects</Text>
-          <VStack spacing={4} align={"center"}>
-            {ProjectDetails.map((project) => (
-              <ProjectCard project={project} />
-            ))}
-          </VStack>
-        </Flex>
+      <Box ref={ref} height={"100vh"} marginY={1}>
+        <motion.div
+          viewport={{ once: true }}
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: isInView ? 1 : 0, scale: 1 }}
+          transition={{ duration: 0.75 }}
+        >
+          <Flex justifyContent={"center"} direction={"column"} align={"center"}>
+            <Heading>{PROJECTS}</Heading>
+            <VStack spacing={4} align={"center"}>
+              {ProjectDetails.map((project) => (
+                <ProjectCard project={project} />
+              ))}
+            </VStack>
+          </Flex>
+        </motion.div>
       </Box>
     </>
   );
-}
+};
 
-export default Projects;
+export default forwardRef(Projects);

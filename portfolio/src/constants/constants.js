@@ -1,6 +1,6 @@
 import { AiOutlineHtml5 } from "react-icons/ai";
 import { DiCss3, DiReact, DiNodejs } from "react-icons/di";
-import { SiJavascript, SiExpress, SiPostgresql } from "react-icons/si";
+import { SiJavascript, SiExpress, SiPostgresql, SiGit } from "react-icons/si";
 
 export const ABOUT_ME_HEADER = "About Me";
 export const ABOUT_ME =
@@ -44,6 +44,10 @@ export const Skills = [
   {
     name: "PostgreSQL",
     icon: SiPostgresql,
+  },
+  {
+    name: "Git",
+    icon: SiGit,
   },
 ];
 
