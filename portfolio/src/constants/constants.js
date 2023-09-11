@@ -58,7 +58,7 @@ export const ProjectDetails = [
     date: "May 2020 - June 2020",
     img: "/encon.png",
     url: "https://github.com/BloomTech-Labs/Encon-fe",
-    stack: ["JavaScript", "React, SCSS", "Context", "React Hook Form"],
+    stack: ["JavaScript", "React", "SCSS", "Context", "React Hook Form"],
   },
   {
     name: "This Portfolio",
