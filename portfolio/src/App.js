@@ -13,10 +13,7 @@ function App() {
   const projectsRef = useRef(null);
 
   const handleScroll = (elementRef) => {
-    window.scrollTo({
-      top: elementRef.current.offsetTop - 100,
-      behavior: "smooth",
-    });
+    elementRef.current?.scrollIntoView({ behavior: "smooth" });
   };
   return (
     <>

@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, VStack } from "@chakra-ui/react";
+import { Flex, Heading, VStack } from "@chakra-ui/react";
 import React, { forwardRef } from "react";
 import { EXPERIENCE, JobExperience } from "../constants/constants.js";
 import ExperienceCard from "./ExperienceCard.jsx";
@@ -9,7 +9,12 @@ const Experience = (_, ref) => {
   const isInView = useInView(ref);
   return (
     <>
-      <Box ref={ref} height={"100vh"} marginY={1}>
+      <Flex
+        ref={ref}
+        height={"100vh"}
+        align={"center"}
+        justifyContent={"center"}
+      >
         <motion.div
           viewport={{ once: true }}
           initial={{ opacity: 0, scale: 0.5 }}
@@ -25,7 +30,7 @@ const Experience = (_, ref) => {
             </VStack>
           </Flex>
         </motion.div>
-      </Box>
+      </Flex>
     </>
   );
 };
