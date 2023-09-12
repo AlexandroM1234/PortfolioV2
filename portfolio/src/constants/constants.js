@@ -2,9 +2,10 @@ import { AiOutlineHtml5 } from "react-icons/ai";
 import { DiCss3, DiReact, DiNodejs } from "react-icons/di";
 import { SiJavascript, SiExpress, SiPostgresql, SiGit } from "react-icons/si";
 
+export const MY_NAME = "Alex Martinez";
 export const ABOUT_ME_HEADER = "About Me";
 export const ABOUT_ME =
-  "I am a Full-Stack Engineer with a focus on the frontend based out ofVirginia. Outside of sitting in my room and coding I like to workout, play video games and listen to music.";
+  "I am a Full-Stack Engineer with a focus on the frontend based out of Virginia. Outside of sitting in my room and coding I like to workout, play video games and listen to music.";
 export const WELCOME = "Hi, I'm Alex";
 export const TITLE = "I'm a Full-Stack Software Engineer";
 export const COPYRIGHT = "Alexandro Martinez @2023";

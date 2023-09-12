@@ -8,7 +8,7 @@ import {
   Heading,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
-import { ABOUT, EXPERIENCE, PROJECTS } from "../constants/constants";
+import { ABOUT, EXPERIENCE, MY_NAME, PROJECTS } from "../constants/constants";
 import { motion } from "framer-motion";
 
 const NavBar = ({ handleScroll, aboutRef, experienceRef, projectsRef }) => {
@@ -26,7 +26,7 @@ const NavBar = ({ handleScroll, aboutRef, experienceRef, projectsRef }) => {
       >
         <Stack marginLeft={2} align={"center"} direction="row">
           <Avatar showBorder name="Alex Martinez" src="/me.png" />
-          <Heading size="md">Alex Martinez</Heading>
+          <Heading size="md">{MY_NAME}</Heading>
         </Stack>
         <Stack direction="row">
           <Button
