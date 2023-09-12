@@ -22,7 +22,7 @@ const Experience = (_, ref) => {
           transition={{ duration: 0.75 }}
         >
           <Flex align={"center"} direction={"column"}>
-            <Heading>{EXPERIENCE}</Heading>
+            <Heading marginY={2}>{EXPERIENCE}</Heading>
             <VStack align={"center"} spacing={4}>
               {JobExperience.map((job) => (
                 <ExperienceCard job={job} />

@@ -21,7 +21,7 @@ const Projects = (_, ref) => {
           transition={{ duration: 0.75 }}
         >
           <Flex justifyContent={"center"} direction={"column"} align={"center"}>
-            <Heading>{PROJECTS}</Heading>
+            <Heading marginY={2}>{PROJECTS}</Heading>
             <VStack spacing={4} align={"center"}>
               {ProjectDetails.map((project) => (
                 <ProjectCard project={project} />

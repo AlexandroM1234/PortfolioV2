@@ -28,11 +28,11 @@ const About = (_, ref) => {
         >
           <Flex justifyContent={"space-evenly"} width={"100%"}>
             <Flex direction={"column"} width={"lg"} textAlign={"left"}>
-              <Heading>{ABOUT_ME_HEADER}</Heading>
+              <Heading marginY={1}>{ABOUT_ME_HEADER}</Heading>
               <Text>{ABOUT_ME}</Text>
             </Flex>
             <Flex direction={"column"} textAlign={"left"}>
-              <Heading>{SKILLS}</Heading>
+              <Heading marginY={1}>{SKILLS}</Heading>
               <SimpleGrid columns={2} spacing={3}>
                 {Skills.map((item) => (
                   <TechCard name={item.name} icon={item.icon} />
