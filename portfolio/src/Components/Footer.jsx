@@ -1,4 +1,4 @@
-import { Stack, Text, Link, Icon, Flex } from "@chakra-ui/react";
+import { Stack, Text, Icon, Flex, Button } from "@chakra-ui/react";
 import React from "react";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 import { AiOutlineMail } from "react-icons/ai";
@@ -22,33 +22,36 @@ const Footer = () => {
 
       <div className="icons">
         <Stack direction={"row"}>
-          <Link
+          <Button
             as={motion.a}
             whileHover={{ scale: 1.1 }}
-            className="chakra-button css-1nlwyv4"
             href="https://www.linkedin.com/in/alex-martinez123/"
+            target="_blank"
             aria-label="Link to Alex Martinez's LinkedIn"
+            variant={"ghost"}
           >
             <Icon boxSize={6} as={SiLinkedin} />
-          </Link>
-          <Link
+          </Button>
+          <Button
             as={motion.a}
             whileHover={{ scale: 1.1 }}
-            className="chakra-button css-1nlwyv4"
             href="https://github.com/AlexandroM1234"
+            target="_blank"
             aria-label="Link to Alex-Martinez's LinkedIn"
+            variant={"ghost"}
           >
             <Icon boxSize={6} as={SiGithub} />
-          </Link>
-          <Link
+          </Button>
+          <Button
             as={motion.a}
             whileHover={{ scale: 1.1 }}
-            className="chakra-button css-1nlwyv4"
             href="mailto:alexmartinez0071234@gmail.com"
+            aria-label="Email Me"
+            target="_blank"
             variant="ghost"
           >
             <Icon boxSize={6} as={AiOutlineMail} mr={"1"} />
-          </Link>
+          </Button>
         </Stack>
       </div>
     </Flex>

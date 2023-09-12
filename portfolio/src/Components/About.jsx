@@ -1,4 +1,4 @@
-import { Flex, SimpleGrid, Text, Box, Heading } from "@chakra-ui/react";
+import { Flex, SimpleGrid, Text, Heading } from "@chakra-ui/react";
 import {
   ABOUT_ME,
   ABOUT_ME_HEADER,
@@ -14,7 +14,12 @@ const About = (_, ref) => {
 
   return (
     <>
-      <Box ref={ref} minHeight={"100vh"} marginY={1}>
+      <Flex
+        ref={ref}
+        minHeight={"100vh"}
+        align={"center"}
+        justifyContent={"center"}
+      >
         <motion.div
           viewport={{ once: true }}
           initial={{ opacity: 0, scale: 0.5 }}
@@ -36,7 +41,7 @@ const About = (_, ref) => {
             </Flex>
           </Flex>
         </motion.div>
-      </Box>
+      </Flex>
     </>
   );
 };

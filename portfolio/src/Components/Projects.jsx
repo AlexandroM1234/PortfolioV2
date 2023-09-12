@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, VStack } from "@chakra-ui/react";
+import { Flex, Heading, VStack } from "@chakra-ui/react";
 import { PROJECTS, ProjectDetails } from "../constants/constants.js";
 import React, { forwardRef } from "react";
 import ProjectCard from "./ProjectCard.jsx";
@@ -8,7 +8,12 @@ const Projects = (_, ref) => {
   const isInView = useInView(ref);
   return (
     <>
-      <Box ref={ref} height={"100vh"} marginY={1}>
+      <Flex
+        ref={ref}
+        height={"100vh"}
+        align={"center"}
+        justifyContent={"center"}
+      >
         <motion.div
           viewport={{ once: true }}
           initial={{ opacity: 0, scale: 0.5 }}
@@ -24,7 +29,7 @@ const Projects = (_, ref) => {
             </VStack>
           </Flex>
         </motion.div>
-      </Box>
+      </Flex>
     </>
   );
 };

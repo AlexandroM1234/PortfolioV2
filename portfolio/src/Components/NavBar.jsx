@@ -19,8 +19,10 @@ const NavBar = ({ handleScroll, aboutRef, experienceRef, projectsRef }) => {
         justifyContent="space-between"
         w="100%"
         padding={2}
-        backgroundColor={"blackAlpha.300"}
+        backgroundColor={colorMode === "dark" ? "gray.900" : "white"}
         position={"fixed"}
+        boxShadow={"base"}
+        top={0}
       >
         <Stack marginLeft={2} align={"center"} direction="row">
           <Avatar showBorder name="Alex Martinez" src="/me.png" />
