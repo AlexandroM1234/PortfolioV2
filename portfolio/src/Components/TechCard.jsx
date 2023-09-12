@@ -1,22 +1,24 @@
-import { Flex, Text, Icon } from "@chakra-ui/react";
+import { Text, Icon, Card } from "@chakra-ui/react";
 import React from "react";
 
 const TechCard = ({ name, icon }) => {
   return (
     <>
-      <Flex
-        justifyContent={"flex-start"}
+      <Card
+        justifyContent={"center"}
+        direction={"row"}
         border={"1px"}
         borderColor={"gray"}
         padding={3}
         borderRadius={10}
         alignItems={"center"}
+        variant={"outline"}
       >
         <Icon as={icon} boxSize={10} />
-        <Text size={"sm"} marginLeft={3}>
+        <Text size={"sm"} marginLeft={2}>
           {name}
         </Text>
-      </Flex>
+      </Card>
     </>
   );
 };
