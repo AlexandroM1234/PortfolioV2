@@ -7,7 +7,7 @@ import {
   useColorMode,
   Heading,
 } from "@chakra-ui/react";
-import { MoonIcon, SunIcon } from "@chakra-ui/icons";
+import { MoonIcon, SunIcon, HamburgerIcon } from "@chakra-ui/icons";
 import { ABOUT, EXPERIENCE, MY_NAME, PROJECTS } from "../constants/constants";
 import { motion } from "framer-motion";
 
@@ -28,10 +28,18 @@ const NavBar = ({ handleScroll, aboutRef, experienceRef, projectsRef }) => {
           marginX={1}
           w={"100%"}
           align={"center"}
-          direction={["row-reverse", "row-reverse", "row"]}
+          direction={"row"}
+          justifyContent={"space-between"}
         >
-          <Avatar showBorder name="Alex Martinez" src="/me.png" />
-          <Heading size="md">{MY_NAME}</Heading>
+          <Flex align={"center"}>
+            <Avatar showBorder name="Alex Martinez" src="/me.png" />
+            <Heading marginLeft={1} size="md">
+              {MY_NAME}
+            </Heading>
+          </Flex>
+          <Button display={["contents", "contents", "none"]}>
+            <HamburgerIcon />
+          </Button>
         </Stack>
         <Stack direction="row" display={["none", "none", "contents"]}>
           <Button
