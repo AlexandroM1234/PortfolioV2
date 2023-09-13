@@ -9,10 +9,17 @@ const Landing = () => {
       direction={"column"}
       align={"center"}
       height={"100vh"}
+      width={"100%"}
+      padding={1}
     >
-      <Flex direction={"column"} alignItems={"center"}>
-        <Text fontSize={"6xl"}>{WELCOME}</Text>
-        <Text fontSize={"4xl"}>{TITLE}</Text>
+      <Flex
+        direction={"column"}
+        alignItems={"center"}
+        width={"100%"}
+        textAlign={"center"}
+      >
+        <Text fontSize={["5xl", "5xl", "6xl"]}>{WELCOME}</Text>
+        <Text fontSize={["4xl", "4xl", "5xl"]}>{TITLE}</Text>
       </Flex>
     </Flex>
   );
