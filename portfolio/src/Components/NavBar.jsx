@@ -39,6 +39,7 @@ const NavBar = ({ handleScroll, aboutRef, experienceRef, projectsRef }) => {
             whileHover={{ scale: 1.1 }}
             onClick={() => handleScroll(aboutRef)}
             variant="ghost"
+            marginX={1}
           >
             {ABOUT}
           </Button>
@@ -47,6 +48,7 @@ const NavBar = ({ handleScroll, aboutRef, experienceRef, projectsRef }) => {
             whileHover={{ scale: 1.1 }}
             onClick={() => handleScroll(experienceRef)}
             variant="ghost"
+            marginX={1}
           >
             {EXPERIENCE}
           </Button>
@@ -55,6 +57,7 @@ const NavBar = ({ handleScroll, aboutRef, experienceRef, projectsRef }) => {
             whileHover={{ scale: 1.1 }}
             onClick={() => handleScroll(projectsRef)}
             variant="ghost"
+            marginX={1}
           >
             {PROJECTS}
           </Button>
@@ -66,6 +69,7 @@ const NavBar = ({ handleScroll, aboutRef, experienceRef, projectsRef }) => {
             aria-label={`Toggle color mode to: ${
               colorMode === "light" ? "dark" : "light"
             }`}
+            marginX={1}
           >
             {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
           </Button>

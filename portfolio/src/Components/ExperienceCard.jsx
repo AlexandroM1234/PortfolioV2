@@ -15,13 +15,14 @@ const ExperienceCard = ({ job }) => {
   return (
     <Card direction={"row"} zIndex={-1} variant={"outline"}>
       <Image
-        maxW={{ base: "100%", sm: "200px" }}
+        maxW={{ base: "0", sm: "200px" }}
         src={logo}
         alt={`${employer} logo`}
+        sizes={["none", "md", "lg"]}
       />
 
       <Stack>
-        <CardBody width={"3xl"}>
+        <CardBody width={["sm", "lg", "3xl"]}>
           <Heading size="md">{employer}</Heading>
           <Heading size="sm">{role}</Heading>
           <Heading size="sm">{date}</Heading>

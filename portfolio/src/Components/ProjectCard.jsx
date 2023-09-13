@@ -18,13 +18,13 @@ const ProjectCard = ({ project }) => {
     <>
       <Card direction={"row"} variant="outline" zIndex={-1}>
         <Image
-          maxW={{ base: "100%", sm: "200px" }}
+          maxW={{ base: "0", sm: "200px" }}
           src={img}
           alt="Project screenshot"
         />
 
         <Stack>
-          <CardBody width={"3xl"}>
+          <CardBody width={["sm", "lg", "3xl"]}>
             <Heading size="md">
               <Link href={url} isExternal>
                 {name} <ExternalLinkIcon mx={"2px"} />
