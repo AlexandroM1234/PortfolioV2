@@ -7,33 +7,63 @@ import {
   useColorMode,
   Heading,
 } from "@chakra-ui/react";
-import { MoonIcon, SunIcon } from "@chakra-ui/icons";
+import { MoonIcon, SunIcon, HamburgerIcon } from "@chakra-ui/icons";
 import { ABOUT, EXPERIENCE, MY_NAME, PROJECTS } from "../constants/constants";
 import { motion } from "framer-motion";
+import HamburgerMenu from "./HamburgerMenu";
+import { useDisclosure } from "@chakra-ui/react";
 
 const NavBar = ({ handleScroll, aboutRef, experienceRef, projectsRef }) => {
   const { colorMode, toggleColorMode } = useColorMode();
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
     <>
       <Flex
         justifyContent="space-between"
-        w="100%"
+        w={"100%"}
         padding={2}
         backgroundColor={colorMode === "dark" ? "gray.900" : "white"}
         position={"fixed"}
         boxShadow={"base"}
         top={0}
       >
-        <Stack marginLeft={2} align={"center"} direction="row">
-          <Avatar showBorder name="Alex Martinez" src="/me.png" />
-          <Heading size="md">{MY_NAME}</Heading>
+        <Stack
+          marginX={1}
+          w={"100%"}
+          align={"center"}
+          direction={"row"}
+          justifyContent={"space-between"}
+        >
+          <Flex align={"center"}>
+            <Avatar showBorder name="Alex Martinez" src="/me.png" />
+            <Heading marginLeft={1} size="md">
+              {MY_NAME}
+            </Heading>
+          </Flex>
+          <Button display={["contents", "contents", "none"]} onClick={onOpen}>
+            <HamburgerIcon />
+          </Button>
         </Stack>
-        <Stack direction="row">
+        {isOpen ? (
+          <HamburgerMenu
+            isOpen={isOpen}
+            onClose={onClose}
+            colorMode={colorMode}
+            toggleColorMode={toggleColorMode}
+            aboutRef={aboutRef}
+            experienceRef={experienceRef}
+            projectsRef={projectsRef}
+            handleScroll={handleScroll}
+          />
+        ) : null}
+        <Stack direction="row" display={["none", "none", "contents"]}>
           <Button
             as={motion.button}
             whileHover={{ scale: 1.1 }}
             onClick={() => handleScroll(aboutRef)}
             variant="ghost"
+            marginX={1}
           >
             {ABOUT}
           </Button>
@@ -42,6 +72,7 @@ const NavBar = ({ handleScroll, aboutRef, experienceRef, projectsRef }) => {
             whileHover={{ scale: 1.1 }}
             onClick={() => handleScroll(experienceRef)}
             variant="ghost"
+            marginX={1}
           >
             {EXPERIENCE}
           </Button>
@@ -50,6 +81,7 @@ const NavBar = ({ handleScroll, aboutRef, experienceRef, projectsRef }) => {
             whileHover={{ scale: 1.1 }}
             onClick={() => handleScroll(projectsRef)}
             variant="ghost"
+            marginX={1}
           >
             {PROJECTS}
           </Button>
@@ -61,6 +93,7 @@ const NavBar = ({ handleScroll, aboutRef, experienceRef, projectsRef }) => {
             aria-label={`Toggle color mode to: ${
               colorMode === "light" ? "dark" : "light"
             }`}
+            marginX={1}
           >
             {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
           </Button>
