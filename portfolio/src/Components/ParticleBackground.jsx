@@ -4,7 +4,6 @@ import { useColorMode } from "@chakra-ui/react";
 
 const ParticleBackground = (props) => {
   const { colorMode } = useColorMode();
-  console.log(colorMode);
   return (
     <Particles
       id="tsparticles"
