@@ -10,9 +10,13 @@ import {
 import { MoonIcon, SunIcon, HamburgerIcon } from "@chakra-ui/icons";
 import { ABOUT, EXPERIENCE, MY_NAME, PROJECTS } from "../constants/constants";
 import { motion } from "framer-motion";
+import HamburgerMenu from "./HamburgerMenu";
+import { useDisclosure } from "@chakra-ui/react";
 
 const NavBar = ({ handleScroll, aboutRef, experienceRef, projectsRef }) => {
   const { colorMode, toggleColorMode } = useColorMode();
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
     <>
       <Flex
@@ -37,10 +41,22 @@ const NavBar = ({ handleScroll, aboutRef, experienceRef, projectsRef }) => {
               {MY_NAME}
             </Heading>
           </Flex>
-          <Button display={["contents", "contents", "none"]}>
+          <Button display={["contents", "contents", "none"]} onClick={onOpen}>
             <HamburgerIcon />
           </Button>
         </Stack>
+        {isOpen ? (
+          <HamburgerMenu
+            isOpen={isOpen}
+            onClose={onClose}
+            colorMode={colorMode}
+            toggleColorMode={toggleColorMode}
+            aboutRef={aboutRef}
+            experienceRef={experienceRef}
+            projectsRef={projectsRef}
+            handleScroll={handleScroll}
+          />
+        ) : null}
         <Stack direction="row" display={["none", "none", "contents"]}>
           <Button
             as={motion.button}
