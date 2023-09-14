@@ -78,7 +78,7 @@ export const JobExperience = [
     date: "October 2022 - July 2023",
     location: "Remote",
     desc: "Worked on a cross-functional team to develop a web application for over 40,000 managers in the company to use.",
-    logo: "/Chase.png",
+    logo: "/chase.png",
     stack: ["JavaScript", "SCSS", "React", "Redux", "Ag-Grid"],
   },
   {
