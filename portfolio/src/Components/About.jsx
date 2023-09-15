@@ -49,7 +49,7 @@ const About = (_, ref) => {
               <Heading marginY={1}>{SKILLS}</Heading>
               <SimpleGrid columns={2} spacing={3}>
                 {Skills.map((item) => (
-                  <TechCard name={item.name} icon={item.icon} />
+                  <TechCard key={item.id} name={item.name} icon={item.icon} />
                 ))}
               </SimpleGrid>
             </Flex>

@@ -15,38 +15,46 @@ export const PROJECTS = "Projects";
 export const SKILLS = "Skills";
 export const Skills = [
   {
+    id: 1,
     name: "HTML",
     icon: AiOutlineHtml5,
   },
   {
+    id: 2,
     name: "CSS",
     icon: DiCss3,
   },
 
   {
+    id: 3,
     name: "JavaScript",
     icon: SiJavascript,
   },
 
   {
+    id: 4,
     name: "React",
     icon: DiReact,
   },
 
   {
+    id: 5,
     name: "Node.js",
     icon: DiNodejs,
   },
 
   {
+    id: 6,
     name: "Express",
     icon: SiExpress,
   },
   {
+    id: 7,
     name: "PostgreSQL",
     icon: SiPostgresql,
   },
   {
+    id: 8,
     name: "Git",
     icon: SiGit,
   },
@@ -54,6 +62,7 @@ export const Skills = [
 
 export const ProjectDetails = [
   {
+    id: 1,
     name: "Econ",
     desc: "A web application for users to see their energy consumtion and cost on house hold items ",
     date: "May 2020 - June 2020",
@@ -62,6 +71,7 @@ export const ProjectDetails = [
     stack: ["JavaScript", "React", "SCSS", "Context", "React Hook Form"],
   },
   {
+    id: 2,
     name: "This Portfolio",
     date: "September 2023 - Current",
     img: "/portfolio.png",
@@ -73,6 +83,7 @@ export const ProjectDetails = [
 
 export const JobExperience = [
   {
+    id: 1,
     employer: "JP Morgan Chase & Co.",
     role: "Software Engineer",
     date: "October 2022 - July 2023",
@@ -82,6 +93,7 @@ export const JobExperience = [
     stack: ["JavaScript", "SCSS", "React", "Redux", "Ag-Grid"],
   },
   {
+    id: 2,
     employer: "GoSchoolBox",
     role: "Software Engineering Fellow",
     date: "March 2022 - April 2022",

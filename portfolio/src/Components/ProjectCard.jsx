@@ -32,8 +32,8 @@ const ProjectCard = ({ project }) => {
             </Heading>
             <Heading size="sm">{date}</Heading>
             <Text py="2">{desc}</Text>
-            {stack.map((tech) => (
-              <Tag size="md" margin={1} borderRadius="full">
+            {stack.map((tech, idx) => (
+              <Tag key={idx} size="md" margin={1} borderRadius="full">
                 <TagLabel>{tech}</TagLabel>
               </Tag>
             ))}

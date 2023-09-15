@@ -28,8 +28,8 @@ const ExperienceCard = ({ job }) => {
           <Heading size="sm">{date}</Heading>
           <Heading size="sm">{location}</Heading>
           <Text py="2">{desc}</Text>
-          {stack.map((tech) => (
-            <Tag size="md" margin={1} borderRadius="full">
+          {stack.map((tech, idx) => (
+            <Tag key={idx} size="md" margin={1} borderRadius="full">
               <TagLabel>{tech}</TagLabel>
             </Tag>
           ))}

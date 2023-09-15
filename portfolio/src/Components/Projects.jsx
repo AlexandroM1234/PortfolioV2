@@ -24,7 +24,7 @@ const Projects = (_, ref) => {
             <Heading marginY={2}>{PROJECTS}</Heading>
             <VStack spacing={4} align={"center"}>
               {ProjectDetails.map((project) => (
-                <ProjectCard project={project} />
+                <ProjectCard key={project.id} project={project} />
               ))}
             </VStack>
           </Flex>
