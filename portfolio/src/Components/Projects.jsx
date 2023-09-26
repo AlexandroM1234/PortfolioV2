@@ -1,4 +1,4 @@
-import { Flex, Heading, VStack } from "@chakra-ui/react";
+import { Flex, Heading } from "@chakra-ui/react";
 import { PROJECTS, ProjectDetails } from "../constants/constants.js";
 import React, { forwardRef } from "react";
 import ProjectCard from "./ProjectCard.jsx";
