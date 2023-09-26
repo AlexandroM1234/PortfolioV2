@@ -24,7 +24,7 @@ const ProjectCard = ({ project }) => {
 
         <CardBody width={["sm", "lg", "3xl"]}>
           <Heading size="md">
-            <Link href={url} isExternal target="_blank">
+            <Link href={url} isExternal>
               {name} <ExternalLinkIcon mx={"2px"} />
             </Link>
           </Heading>
