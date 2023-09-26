@@ -22,11 +22,11 @@ const Projects = (_, ref) => {
         >
           <Flex justifyContent={"center"} direction={"column"} align={"center"}>
             <Heading marginY={2}>{PROJECTS}</Heading>
-            <VStack spacing={4} align={"center"}>
+            <Flex direction={"column"} align={"center"}>
               {ProjectDetails.map((project) => (
                 <ProjectCard key={project.id} project={project} />
               ))}
-            </VStack>
+            </Flex>
           </Flex>
         </motion.div>
       </Flex>

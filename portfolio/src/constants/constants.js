@@ -63,12 +63,12 @@ export const Skills = [
 export const ProjectDetails = [
   {
     id: 1,
-    name: "Econ",
-    desc: "A web application for users to see their energy consumtion and cost on house hold items ",
-    date: "May 2020 - June 2020",
-    img: "/encon.png",
-    url: "https://github.com/BloomTech-Labs/Encon-fe",
-    stack: ["JavaScript", "React", "SCSS", "Context", "React Hook Form"],
+    name: "Task Manager",
+    desc: "A web application to help manage what you need to get done on a daily basis.",
+    date: "September 2023",
+    img: "/taskmanager.png",
+    url: "https://task-manager-eosin-beta.vercel.app/",
+    stack: ["Typescript", "React", "Chakra UI", "Redux", "React Hook Form"],
   },
   {
     id: 2,
@@ -78,6 +78,15 @@ export const ProjectDetails = [
     desc: "Curious to see how I built this? Check it out on GitHub.",
     url: "https://github.com/AlexandroM1234/PortfolioV2",
     stack: ["JavaScript", "React", "Chakra UI", "Framer Motion"],
+  },
+  {
+    id: 3,
+    name: "Econ",
+    desc: "A web application for users to see their energy consumtion and cost on house hold items ",
+    date: "May 2020 - June 2020",
+    img: "/encon.png",
+    url: "https://github.com/BloomTech-Labs/Encon-fe",
+    stack: ["JavaScript", "React", "SCSS", "Context", "React Hook Form"],
   },
 ];
 

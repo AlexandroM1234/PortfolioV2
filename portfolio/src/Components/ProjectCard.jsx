@@ -16,29 +16,27 @@ const ProjectCard = ({ project }) => {
   const { name, desc, date, img, url, stack } = project;
   return (
     <>
-      <Card direction={"row"} variant="outline" zIndex={-1}>
+      <Card direction={"row"} variant="outline" marginY={4}>
         <Image
           maxW={{ base: "0", sm: "200px" }}
           src={img}
           alt="Project screenshot"
         />
 
-        <Stack>
-          <CardBody width={["sm", "lg", "3xl"]}>
-            <Heading size="md">
-              <Link href={url} isExternal>
-                {name} <ExternalLinkIcon mx={"2px"} />
-              </Link>
-            </Heading>
-            <Heading size="sm">{date}</Heading>
-            <Text py="2">{desc}</Text>
-            {stack.map((tech, idx) => (
-              <Tag key={idx} size="md" margin={1} borderRadius="full">
-                <TagLabel>{tech}</TagLabel>
-              </Tag>
-            ))}
-          </CardBody>
-        </Stack>
+        <CardBody width={["sm", "lg", "3xl"]}>
+          <Heading size="md">
+            <Link href={url} isExternal target="_blank">
+              {name} <ExternalLinkIcon mx={"2px"} />
+            </Link>
+          </Heading>
+          <Heading size="sm">{date}</Heading>
+          <Text py="2">{desc}</Text>
+          {stack.map((tech, idx) => (
+            <Tag key={idx} size="md" margin={1} borderRadius="full">
+              <TagLabel>{tech}</TagLabel>
+            </Tag>
+          ))}
+        </CardBody>
       </Card>
     </>
   );

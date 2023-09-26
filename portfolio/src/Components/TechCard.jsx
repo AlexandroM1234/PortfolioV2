@@ -13,7 +13,6 @@ const TechCard = ({ name, icon }) => {
         borderRadius={10}
         alignItems={"center"}
         variant={"outline"}
-        zIndex={"-1"}
       >
         <Icon as={icon} boxSize={10} />
         <Text size={"sm"} marginLeft={2}>

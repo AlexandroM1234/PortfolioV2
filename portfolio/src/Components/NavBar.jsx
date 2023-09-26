@@ -27,6 +27,7 @@ const NavBar = ({ handleScroll, aboutRef, experienceRef, projectsRef }) => {
         position={"fixed"}
         boxShadow={"base"}
         top={0}
+        zIndex={1}
       >
         <Stack
           marginX={1}
